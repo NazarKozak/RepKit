@@ -10,6 +10,7 @@ import QuartzCore
 #if canImport(Vision)
 import CoreVideo
 import CoreGraphics
+import ImageIO
 #endif
 
 /// Counts reps / tracks holds for an ``Exercise`` from a stream of poses.
