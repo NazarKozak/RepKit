@@ -48,6 +48,13 @@ public extension PoseLandmarks {
         }
     }
 
+    /// Normalized rep depth from the deeper (smaller-angle) of two sides — ~1 at the
+    /// bottom of the movement, ~0 at the top. `standing`/`deep` are the angle range.
+    func depth(of angle: (Side) -> Double?, standing: Double, deep: Double) -> Double? {
+        guard let l = angle(.left), let r = angle(.right) else { return nil }
+        return PoseMath.normalize(Swift.min(l, r), from: standing, to: deep)
+    }
+
     /// Hip angle (shoulder–hip–knee), averaged over both sides. ~180° when the body
     /// is straight (a good plank), smaller when piked or sagging.
     func hipAngle() -> Double? {

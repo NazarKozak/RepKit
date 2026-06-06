@@ -98,3 +98,26 @@ struct SquatTests {
         #expect(detector.count == 0)
     }
 }
+
+@Suite("Custom exercise DSL")
+struct CustomDSLTests {
+    @Test("A custom rep exercise counts through the DSL")
+    func customReps() {
+        // No gates: a clean down-up of the knees counts, no anti-cheat.
+        let spec = ExerciseSpec.reps(name: "Deep knee bend") { pose in
+            pose.depth(of: pose.kneeAngle, standing: 160, deep: 95)
+        }
+        let detector = RepDetector(spec: spec)
+        _ = detector.process(legPose(leftKnee: 180, rightKnee: 180))
+        _ = detector.process(legPose(leftKnee: 90, rightKnee: 90))
+        let result = detector.process(legPose(leftKnee: 180, rightKnee: 180))
+        #expect(result == .rep(count: 1))
+    }
+
+    @Test("All six built-in exercises expose a spec")
+    func builtInsHaveSpecs() {
+        #expect(Exercise.allCases.count == 6)
+        #expect(Exercise.plank.isTimed)
+        #expect(!Exercise.squat.isTimed)
+    }
+}

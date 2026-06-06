@@ -48,7 +48,28 @@ RepKit isn't a thin wrapper over landmarks — the rep logic is the point:
 
 ## Exercises
 
-Built in: `.squat`, `.pushUp`, `.plank`. More are easy to add — each is a small engine over joint angles.
+Built in: `.squat`, `.pushUp`, `.lunge`, `.bicepCurl`, `.shoulderPress`, `.plank`.
+
+### Define your own (DSL)
+
+Every exercise — built-in or custom — is an `ExerciseSpec`: a 0…1 progress signal plus
+optional anti-cheat gates. Define one in a few lines:
+
+```swift
+let deepSquat = ExerciseSpec.reps(
+    name: "Deep squat",
+    formTip: "Bend both knees fully",
+    gates: [Gate.bent({ $0.kneeAngle($1) }, .left,  below: 120),
+            Gate.bent({ $0.kneeAngle($1) }, .right, below: 120)],
+    progress: { $0.depth(of: $0.kneeAngle, standing: 160, deep: 80) }
+)
+
+let plank = ExerciseSpec.hold(name: "Plank") { pose in
+    pose.hipAngle().map { ($0 - 140) / 40 }   // straight body → ~1
+}
+
+let detector = RepDetector(spec: deepSquat)
+```
 
 ## Usage
 
@@ -85,12 +106,13 @@ let update = detector.process(landmarks)
 
 ## Roadmap
 
-- [x] Squat, push-up (dual-joint anti-cheat), plank (timed hold)
+- [x] Squat, push-up, lunge (dual-joint anti-cheat), plank (timed hold)
+- [x] Bicep curl, shoulder press
 - [x] Apple Vision landmark source, free & on-device
 - [x] Hysteresis counter + threshold timer primitives
-- [ ] More exercises (lunge, bicep curl, shoulder press, leg raise)
-- [ ] A custom-exercise DSL (define joints + thresholds in a few lines)
-- [ ] SwiftUI skeleton + rep-counter overlay, demo app
+- [x] Custom-exercise DSL (`ExerciseSpec.reps`/`.hold`)
+- [x] SwiftUI demo: live camera, skeleton overlay, rep counter
+- [ ] Leg raise, jumping jack, sit-up
 - [ ] Rep tempo / range-of-motion analytics
 
 ## License

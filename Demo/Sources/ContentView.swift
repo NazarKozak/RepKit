@@ -31,15 +31,24 @@ struct ContentView: View {
 
     private var header: some View {
         VStack(spacing: 8) {
-            Picker("Exercise", selection: Binding(
-                get: { camera.exercise },
-                set: { camera.setExercise($0) }
-            )) {
-                Text("Squat").tag(Exercise.squat)
-                Text("Push-up").tag(Exercise.pushUp)
-                Text("Plank").tag(Exercise.plank)
+            Menu {
+                Picker("Exercise", selection: Binding(
+                    get: { camera.exercise },
+                    set: { camera.setExercise($0) }
+                )) {
+                    ForEach(Exercise.allCases, id: \.self) { exercise in
+                        Text(exercise.spec.name).tag(exercise)
+                    }
+                }
+            } label: {
+                HStack {
+                    Text(camera.exercise.spec.name).font(.headline)
+                    Image(systemName: "chevron.up.chevron.down").font(.caption)
+                }
+                .padding(.horizontal, 16).padding(.vertical, 10)
+                .background(.black.opacity(0.4), in: Capsule())
+                .foregroundStyle(.white)
             }
-            .pickerStyle(.segmented)
 
             if let feedback = camera.feedback {
                 Text(feedback)

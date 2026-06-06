@@ -31,12 +31,18 @@ import ImageIO
 ///
 /// Not thread-safe: feed frames from a single queue.
 public final class RepDetector: @unchecked Sendable {
-    public let exercise: Exercise
+    public let spec: ExerciseSpec
     private let engine: any ExerciseEngine
 
-    public init(exercise: Exercise) {
-        self.exercise = exercise
-        self.engine = exercise.makeEngine()
+    /// Detects a built-in ``Exercise``.
+    public convenience init(exercise: Exercise) {
+        self.init(spec: exercise.spec)
+    }
+
+    /// Detects a custom exercise defined with the `ExerciseSpec` DSL.
+    public init(spec: ExerciseSpec) {
+        self.spec = spec
+        self.engine = SpecEngine(spec)
     }
 
     /// Running rep count (or seconds held for timed exercises).
