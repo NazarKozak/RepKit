@@ -1,17 +1,17 @@
 //
 //  CameraPoseController.swift
-//  RepKitDemo
+//  RepCounterSDKDemo
 //
 //  Created by Nazar Kozak on 05.06.2026.
 //
-//  Drives the camera, runs RepKit's VisionPoseSource on each frame, feeds a
+//  Drives the camera, runs RepCounterSDK's VisionPoseSource on each frame, feeds a
 //  RepDetector, and publishes the pose + rep count for the UI.
 //
 
 import Foundation
 @preconcurrency import AVFoundation
 import CoreVideo
-import RepKit
+import RepCounterSDK
 
 @Observable
 final class CameraPoseController: NSObject, AVCaptureVideoDataOutputSampleBufferDelegate, @unchecked Sendable {

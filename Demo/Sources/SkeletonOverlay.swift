@@ -1,12 +1,12 @@
 //
 //  SkeletonOverlay.swift
-//  RepKitDemo
+//  RepCounterSDKDemo
 //
 //  Created by Nazar Kozak on 05.06.2026.
 //
 
 import SwiftUI
-import RepKit
+import RepCounterSDK
 
 /// Draws the detected skeleton over the camera preview.
 struct SkeletonOverlay: View {

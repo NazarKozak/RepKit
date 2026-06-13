@@ -1,6 +1,6 @@
 //
 //  ExerciseEngines.swift
-//  RepKit
+//  RepCounterSDK
 //
 //  Created by Nazar Kozak on 05.06.2026.
 //

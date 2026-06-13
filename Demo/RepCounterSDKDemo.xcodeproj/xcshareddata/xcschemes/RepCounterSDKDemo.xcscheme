@@ -15,9 +15,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "AA0000000000000000000005"
-               BuildableName = "RepKitDemo.app"
-               BlueprintName = "RepKitDemo"
-               ReferencedContainer = "container:RepKitDemo.xcodeproj">
+               BuildableName = "RepCounterSDKDemo.app"
+               BlueprintName = "RepCounterSDKDemo"
+               ReferencedContainer = "container:RepCounterSDKDemo.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -43,9 +43,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "AA0000000000000000000005"
-            BuildableName = "RepKitDemo.app"
-            BlueprintName = "RepKitDemo"
-            ReferencedContainer = "container:RepKitDemo.xcodeproj">
+            BuildableName = "RepCounterSDKDemo.app"
+            BlueprintName = "RepCounterSDKDemo"
+            ReferencedContainer = "container:RepCounterSDKDemo.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </LaunchAction>
@@ -60,9 +60,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "AA0000000000000000000005"
-            BuildableName = "RepKitDemo.app"
-            BlueprintName = "RepKitDemo"
-            ReferencedContainer = "container:RepKitDemo.xcodeproj">
+            BuildableName = "RepCounterSDKDemo.app"
+            BlueprintName = "RepCounterSDKDemo"
+            ReferencedContainer = "container:RepCounterSDKDemo.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>

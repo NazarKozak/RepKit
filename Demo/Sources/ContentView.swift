@@ -1,12 +1,12 @@
 //
 //  ContentView.swift
-//  RepKitDemo
+//  RepCounterSDKDemo
 //
 //  Created by Nazar Kozak on 05.06.2026.
 //
 
 import SwiftUI
-import RepKit
+import RepCounterSDK
 
 struct ContentView: View {
     @State private var camera = CameraPoseController(exercise: .squat)

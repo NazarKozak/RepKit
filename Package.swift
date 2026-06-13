@@ -1,7 +1,7 @@
 // swift-tools-version: 6.0
 //
 //  Package.swift
-//  RepKit
+//  RepCounterSDK
 //
 //  Created by Nazar Kozak on 05.06.2026.
 //
@@ -9,24 +9,24 @@
 import PackageDescription
 
 let package = Package(
-    name: "RepKit",
+    name: "RepCounterSDK",
     platforms: [
         .iOS(.v17),
         .macOS(.v12)
     ],
     products: [
-        .library(name: "RepKit", targets: ["RepKit"])
+        .library(name: "RepCounterSDK", targets: ["RepCounterSDK"])
     ],
     targets: [
         .target(
-            name: "RepKit",
+            name: "RepCounterSDK",
             swiftSettings: [
                 .swiftLanguageMode(.v6)
             ]
         ),
         .testTarget(
-            name: "RepKitTests",
-            dependencies: ["RepKit"]
+            name: "RepCounterSDKTests",
+            dependencies: ["RepCounterSDK"]
         )
     ]
 )

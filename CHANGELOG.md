@@ -1,6 +1,6 @@
 # Changelog
 
-All notable changes to RepKit are documented here. Format follows
+All notable changes to RepCounterSDK are documented here. Format follows
 [Keep a Changelog](https://keepachangelog.com/); versions follow SemVer.
 
 ## [0.2.0] - 2026-06-06
@@ -11,7 +11,7 @@ All notable changes to RepKit are documented here. Format follows
   optional anti-cheat `Gate`s; `RepDetector(spec:)`. All built-ins now compile to
   a spec interpreted by one engine.
 - `PoseLandmarks.depth(of:standing:deep:)` helper.
-- `RepKitDemo` Xcode project — live camera, skeleton overlay, exercise picker,
+- `RepCounterSDKDemo` Xcode project — live camera, skeleton overlay, exercise picker,
   rep counter and form tips.
 
 ## [0.1.0] - 2026-06-05

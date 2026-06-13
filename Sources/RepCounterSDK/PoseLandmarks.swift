@@ -1,6 +1,6 @@
 //
 //  PoseLandmarks.swift
-//  RepKit
+//  RepCounterSDK
 //
 //  Created by Nazar Kozak on 05.06.2026.
 //
@@ -10,7 +10,7 @@ import Foundation
 
 /// A single detected body pose: normalized joint positions plus per-joint confidence.
 ///
-/// Coordinates are normalized (0…1). RepKit only uses angles, so the coordinate
+/// Coordinates are normalized (0…1). RepCounterSDK only uses angles, so the coordinate
 /// origin/orientation does not matter as long as it is consistent within a frame.
 public struct PoseLandmarks: Sendable {
     public var points: [Joint: CGPoint]

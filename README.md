@@ -1,6 +1,6 @@
-# RepKit
+# RepCounterSDK
 
-[![CI](https://github.com/NazarKozak/RepKit/actions/workflows/ci.yml/badge.svg)](https://github.com/NazarKozak/RepKit/actions/workflows/ci.yml)
+[![CI](https://github.com/NazarKozak/RepCounterSDK/actions/workflows/ci.yml/badge.svg)](https://github.com/NazarKozak/RepCounterSDK/actions/workflows/ci.yml)
 ![Swift 6](https://img.shields.io/badge/Swift-6-orange.svg)
 ![Platforms](https://img.shields.io/badge/Platforms-iOS%2017%2B%20%7C%20macOS%2012%2B-blue.svg)
 ![SPM](https://img.shields.io/badge/SwiftPM-compatible-brightgreen.svg)
@@ -8,10 +8,10 @@
 
 **Count exercise reps on-device, for free — no SDK key, no cloud.**
 
-RepKit turns Apple Vision body-pose landmarks into rep counts and form feedback. It's the open, MIT-licensed alternative to paid pose-fitness SDKs: everything runs on the Neural Engine, nothing leaves the phone, and there's no key to register.
+RepCounterSDK turns Apple Vision body-pose landmarks into rep counts and form feedback. It's the open, MIT-licensed alternative to paid pose-fitness SDKs: everything runs on the Neural Engine, nothing leaves the phone, and there's no key to register.
 
 ```swift
-import RepKit
+import RepCounterSDK
 
 let detector = RepDetector(exercise: .squat)
 
@@ -24,9 +24,9 @@ case .idle: break
 }
 ```
 
-## Why RepKit
+## Why RepCounterSDK
 
-| | Paid pose SDKs | **RepKit** |
+| | Paid pose SDKs | **RepCounterSDK** |
 |---|:---:|:---:|
 | On-device | ✅ | ✅ |
 | SDK key / account required | ❌ (key) | ✅ none |
@@ -37,7 +37,7 @@ case .idle: break
 
 ## What makes the counting good
 
-RepKit isn't a thin wrapper over landmarks — the rep logic is the point:
+RepCounterSDK isn't a thin wrapper over landmarks — the rep logic is the point:
 
 - **Hysteresis counting** — a rep only counts on a full *rise past `enter`* then *fall past `exit`*; the gap rejects frame jitter so noise can't double-count.
 - **Dual-joint anti-cheat** — for symmetric moves (squat, push-up), each side has its own angle-gated counter, and a rep is only credited when **both sides** reached the bottom. Half-reps and one-sided cheating are rejected with a form tip.
@@ -47,10 +47,10 @@ RepKit isn't a thin wrapper over landmarks — the rep logic is the point:
 ## Install
 
 ```swift
-.package(url: "https://github.com/NazarKozak/RepKit.git", from: "0.1.0")
+.package(url: "https://github.com/NazarKozak/RepCounterSDK.git", from: "0.1.0")
 ```
 
-…and add `"RepKit"` to your target. Requires iOS 17+ / macOS 12+.
+…and add `"RepCounterSDK"` to your target. Requires iOS 17+ / macOS 12+.
 
 ## Exercises
 
@@ -100,7 +100,7 @@ let landmarks = PoseLandmarks(points: [
 let update = detector.process(landmarks)
 ```
 
-`RepKit` only uses joint **angles**, so any consistent normalized coordinate space works.
+`RepCounterSDK` only uses joint **angles**, so any consistent normalized coordinate space works.
 
 ## API
 

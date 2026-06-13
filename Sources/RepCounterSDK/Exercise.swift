@@ -1,13 +1,13 @@
 //
 //  Exercise.swift
-//  RepKit
+//  RepCounterSDK
 //
 //  Created by Nazar Kozak on 05.06.2026.
 //
 
 import Foundation
 
-/// The exercises RepKit detects out of the box. Each compiles to an ``ExerciseSpec``;
+/// The exercises RepCounterSDK detects out of the box. Each compiles to an ``ExerciseSpec``;
 /// define your own with the `ExerciseSpec.reps`/`.hold` DSL.
 public enum Exercise: Sendable, CaseIterable {
     case squat

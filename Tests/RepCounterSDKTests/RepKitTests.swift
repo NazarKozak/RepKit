@@ -1,13 +1,13 @@
 //
-//  RepKitTests.swift
-//  RepKit
+//  RepCounterSDKTests.swift
+//  RepCounterSDK
 //
 //  Created by Nazar Kozak on 05.06.2026.
 //
 
 import Testing
 import CoreGraphics
-@testable import RepKit
+@testable import RepCounterSDK
 
 // MARK: - Synthetic poses (only the joints each test needs)
 

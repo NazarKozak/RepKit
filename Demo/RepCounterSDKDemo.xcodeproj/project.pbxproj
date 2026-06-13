@@ -7,11 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		AA0000000000000000000012 /* RepKit in Frameworks */ = {isa = PBXBuildFile; productRef = AA0000000000000000000011 /* RepKit */; };
+		AA0000000000000000000012 /* RepCounterSDK in Frameworks */ = {isa = PBXBuildFile; productRef = AA0000000000000000000011 /* RepCounterSDK */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		AA0000000000000000000006 /* RepKitDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RepKitDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		AA0000000000000000000006 /* RepCounterSDKDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RepCounterSDKDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
@@ -23,7 +23,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AA0000000000000000000012 /* RepKit in Frameworks */,
+				AA0000000000000000000012 /* RepCounterSDK in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -41,7 +41,7 @@
 		AA0000000000000000000003 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				AA0000000000000000000006 /* RepKitDemo.app */,
+				AA0000000000000000000006 /* RepCounterSDKDemo.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -49,9 +49,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		AA0000000000000000000005 /* RepKitDemo */ = {
+		AA0000000000000000000005 /* RepCounterSDKDemo */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = AA000000000000000000000B /* Build configuration list for PBXNativeTarget "RepKitDemo" */;
+			buildConfigurationList = AA000000000000000000000B /* Build configuration list for PBXNativeTarget "RepCounterSDKDemo" */;
 			buildPhases = (
 				AA0000000000000000000007 /* Sources */,
 				AA0000000000000000000008 /* Frameworks */,
@@ -64,12 +64,12 @@
 			fileSystemSynchronizedGroups = (
 				AA0000000000000000000004 /* Sources */,
 			);
-			name = RepKitDemo;
+			name = RepCounterSDKDemo;
 			packageProductDependencies = (
-				AA0000000000000000000011 /* RepKit */,
+				AA0000000000000000000011 /* RepCounterSDK */,
 			);
-			productName = RepKitDemo;
-			productReference = AA0000000000000000000006 /* RepKitDemo.app */;
+			productName = RepCounterSDKDemo;
+			productReference = AA0000000000000000000006 /* RepCounterSDKDemo.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -87,7 +87,7 @@
 					};
 				};
 			};
-			buildConfigurationList = AA000000000000000000000A /* Build configuration list for PBXProject "RepKitDemo" */;
+			buildConfigurationList = AA000000000000000000000A /* Build configuration list for PBXProject "RepCounterSDKDemo" */;
 			compatibilityVersion = "Xcode 16.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -104,7 +104,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				AA0000000000000000000005 /* RepKitDemo */,
+				AA0000000000000000000005 /* RepCounterSDKDemo */,
 			);
 		};
 /* End PBXProject section */
@@ -178,7 +178,7 @@
 				DEVELOPMENT_TEAM = WP95535JP5;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_KEY_NSCameraUsageDescription = "Used to detect your body pose for rep counting in the RepKit demo.";
+				INFOPLIST_KEY_NSCameraUsageDescription = "Used to detect your body pose for rep counting in the RepCounterSDK demo.";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -189,7 +189,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 0.1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.nazarkozak.RepKitDemo;
+				PRODUCT_BUNDLE_IDENTIFIER = com.nazarkozak.RepCounterSDKDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 6.0;
@@ -206,7 +206,7 @@
 				DEVELOPMENT_TEAM = WP95535JP5;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_KEY_NSCameraUsageDescription = "Used to detect your body pose for rep counting in the RepKit demo.";
+				INFOPLIST_KEY_NSCameraUsageDescription = "Used to detect your body pose for rep counting in the RepCounterSDK demo.";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -217,7 +217,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 0.1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.nazarkozak.RepKitDemo;
+				PRODUCT_BUNDLE_IDENTIFIER = com.nazarkozak.RepCounterSDKDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 6.0;
@@ -228,7 +228,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		AA000000000000000000000A /* Build configuration list for PBXProject "RepKitDemo" */ = {
+		AA000000000000000000000A /* Build configuration list for PBXProject "RepCounterSDKDemo" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				AA000000000000000000000C /* Debug */,
@@ -237,7 +237,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		AA000000000000000000000B /* Build configuration list for PBXNativeTarget "RepKitDemo" */ = {
+		AA000000000000000000000B /* Build configuration list for PBXNativeTarget "RepCounterSDKDemo" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				AA000000000000000000000E /* Debug */,
@@ -256,9 +256,9 @@
 /* End XCLocalSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		AA0000000000000000000011 /* RepKit */ = {
+		AA0000000000000000000011 /* RepCounterSDK */ = {
 			isa = XCSwiftPackageProductDependency;
-			productName = RepKit;
+			productName = RepCounterSDK;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

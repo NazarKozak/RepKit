@@ -1,6 +1,6 @@
 //
 //  Joint.swift
-//  RepKit
+//  RepCounterSDK
 //
 //  Created by Nazar Kozak on 05.06.2026.
 //
@@ -13,7 +13,7 @@ public enum Side: Sendable, Hashable {
     case right
 }
 
-/// The body joints RepKit reasons about (a subset of Vision's body-pose points).
+/// The body joints RepCounterSDK reasons about (a subset of Vision's body-pose points).
 public enum Joint: Sendable, Hashable {
     case nose
     case leftShoulder, rightShoulder
